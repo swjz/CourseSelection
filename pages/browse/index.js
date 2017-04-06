@@ -1,6 +1,9 @@
 // pages/browse/index.js
 Page({
-  data:{},
+  data: {
+        inputShowed: false,
+        inputVal: ""
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
@@ -15,5 +18,27 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+    
+  showInput: function () {
+      this.setData({
+          inputShowed: true
+      });
+  },
+  hideInput: function () {
+      this.setData({
+          inputVal: "",
+          inputShowed: false
+      });
+  },
+  clearInput: function () {
+      this.setData({
+          inputVal: ""
+      });
+  },
+  inputTyping: function (e) {
+      this.setData({
+          inputVal: e.detail.value
+      });
   }
-})
+});

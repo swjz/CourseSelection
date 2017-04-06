@@ -1,4 +1,5 @@
 /* pages/browse/index.wxss */
+@import "../common/lib/weui.wxss";
 .flex-wrp{
   margin-top: 60rpx;
   display:flex;
@@ -12,4 +13,14 @@
   margin: 0 auto;
   width: 600rpx;
   height: 200rpx;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
 }

@@ -1,13 +1,101 @@
 <!--pages/browse/index.wxml-->
-<text>pages/browse/index.wxml</text>
+<!--<text>pages/browse/index.wxml</text>-->
 <import src="../common/head.wxml" />
 <import src="../common/foot.wxml" />
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
 
-<view class="container">
-  <template is="head" data="{{title: 'view'}}"/>
+    <view class="weui-panel weui-panel_access">
+        <!--<view class="weui-panel__hd">文字组合列表</view>-->
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">计算机组成与系统结构</view>
+                <view class="weui-media-box__desc">课程收获：4.0/4.0 课程难度：3.9/4.0 平均成绩：3.0/4.0</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">工业数据挖掘与分析</view>
+                <view class="weui-media-box__desc">课程收获：4.0/4.0 课程难度：4.0/4.0 平均成绩：4.0/4.0</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">影视欣赏</view>
+                <view class="weui-media-box__desc">课程收获：2.5/4.0 课程难度：2.3/4.0 平均成绩：3.3/4.0</view>
+            </view>
+            <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">经济学原理(2)</view>
+                <view class="weui-media-box__desc">课程收获：3.5/4.0 课程难度：3.3/4.0 平均成绩：3.0/4.0</view>
+            </view>
+        </view>
 
-  <view class="page-body">
-    <view class="page-section">
+        <!--<view class="weui-loadmore">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>-->
+        <!--<view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>-->
+        <!--<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>-->
+        
+        <!--<view class="weui-panel__ft">
+            <view class="weui-cell weui-cell_access weui-cell_link">
+                <view class="weui-cell__bd">查看更多</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>-->
+    </view>
+
+  <!--<view class="page-section">
+      <view class="page-section-title">
+        <text>计算机组成与系统结构</text>
+      </view>
+      <view class="page-section-spacing">
+      <text>课程收获：4.0/4.0
+      课程难度：3.9/4.0
+      平均成绩：3.15/4.0
+      </text>
+      </view>
+  </view>-->
+    <!--<view class="page-section">
       <view class="page-section-title">
         <text>flex-direction: row\n横向布局</text>
       </view>
@@ -28,8 +116,8 @@
         <view class="flex-item flex-item-V demo-text-2"></view>
         <view class="flex-item flex-item-V demo-text-3"></view>
       </view>
-    </view>
-  </view>
+    </view>-->
 
   <template is="foot" />
+
 </view>
