@@ -15,7 +15,7 @@ Page({
         // 页面关闭
     },
     toComment: function () {
-        wx.navigateTo({
+        wx.switchTab({
             url: '../rate/index'
         })
     }
