@@ -73,6 +73,14 @@
   margin-bottom: 5px;
 }
 
+.wx-text_professor {
+  margin-right: 100px;
+  font-size: 13px;
+  color: rgb(153, 153, 153);
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
 .wx-view_section {
   padding: 20px 20px 0px;
   padding-top: 20px;
