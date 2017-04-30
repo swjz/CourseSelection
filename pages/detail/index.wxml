@@ -79,6 +79,6 @@
       </view>
     </view>
   </view>-->
-  <button bindtap="tap_277327c4" class="wx-button_zkPe8y" data-c_act_id="M_4789519541aba7eb" data-c_e_id="wx_button_4a8d9157" hover-class="button-hover" size="default" type="default">写评论
+  <button bindtap="toComment" class="wx-button_to_comment" hover-class="button-hover" size="default" type="default">写评论
   </button>
 </view>
