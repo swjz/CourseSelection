@@ -61,8 +61,8 @@
 .wx-text_title {
   font-size: 24px;
   font-family: "andale mono";
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 400;
+  margin-bottom: 0px;
 }
 
 .wx-text_description {
@@ -75,10 +75,10 @@
 
 .wx-text_professor {
   margin-right: 100px;
-  font-size: 13px;
+  font-size: 15px;
   color: rgb(153, 153, 153);
   line-height: 1.2em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .wx-view_section {
@@ -89,7 +89,7 @@
 .wx-text_section_title {
   font-weight: 600;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
 
 .commentlistitem {

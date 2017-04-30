@@ -47,19 +47,23 @@
     <!--<view class="weui-panel__hd">文字组合列表</view>-->
     <view class="weui-panel__bd">
       <view bindtap="toDetail" class="weui-media-box weui-media-box_text">
-        <view class="weui-media-box__title weui-media-box__title_in-text">计算机组成与系统结构</view>
+        <view class="weui-media-box__title">计算机组成与系统结构</view>
+        <view class="wx-professor">陈文光 - 计算机系</view>
         <view class="weui-media-box__desc">课程收获：4.0/4.0 课程难度：3.9/4.0 平均成绩：3.0/4.0</view>
       </view>
       <view class="weui-media-box weui-media-box_text">
-        <view class="weui-media-box__title weui-media-box__title_in-text">工业数据挖掘与分析</view>
+        <view class="weui-media-box__title">工业数据挖掘与分析</view>
+        <view class="wx-professor">徐华 - 计算机系</view>
         <view class="weui-media-box__desc">课程收获：4.0/4.0 课程难度：4.0/4.0 平均成绩：4.0/4.0</view>
       </view>
       <view class="weui-media-box weui-media-box_text">
-        <view class="weui-media-box__title weui-media-box__title_in-text">影视欣赏</view>
+        <view class="weui-media-box__title">影视欣赏</view>
+        <view class="wx-professor">刘宁 - 外文系</view>
         <view class="weui-media-box__desc">课程收获：2.5/4.0 课程难度：2.3/4.0 平均成绩：3.3/4.0</view>
       </view>
       <view class="weui-media-box weui-media-box_text">
-        <view class="weui-media-box__title weui-media-box__title_in-text">经济学原理(2)</view>
+        <view class="weui-media-box__title">经济学原理(2)</view>
+        <view class="wx-professor">钟笑寒 - 经管学院</view>
         <view class="weui-media-box__desc">课程收获：3.5/4.0 课程难度：3.3/4.0 平均成绩：3.0/4.0</view>
       </view>
     </view>
