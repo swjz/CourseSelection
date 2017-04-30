@@ -40,5 +40,10 @@ Page({
       this.setData({
           inputVal: e.detail.value
       });
+  },
+  toDetail: function() {
+    wx.navigateTo({
+      url: '../detail/index'
+    })
   }
 });

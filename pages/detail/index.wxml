@@ -1,0 +1,84 @@
+
+<!--pages/detail/index.wxml-->
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+<view class="page">
+  <view class="c-minheight wx-view_movie_info" data-c_e_id="wx_view_22939a03">
+    <!--<view class="c-minheight wx-view_movie_score" data-c_e_id="wx_view_3d6933f0">
+      <text class="c-block wx-text_score_value" data-c_e_id="wx_text_20ab13fe">8.4</text>
+
+      <text class="c-block wx-text_score_stars" data-c_e_id="wx_text_d07763e8"></text>
+      <text class="c-block wx-text_score_uv" data-c_e_id="wx_text_b439aa5b"> 34776人</text>
+    </view>-->
+    <text class="c-block wx-text_title" data-c_e_id="wx_text_55c207ca">计算机组成与系统结构
+      <br/>
+    </text>
+    <text class="c-block wx-text_description" data-c_e_id="wx_text_46bc700d">课程收获：
+    </text>
+    <text class="c-block wx-text_description" data-c_e_id="wx_text01771f14">课程难度：
+    </text>
+    <text class="c-block wx-text_description" data-c_e_id="wx_textf1b12ef8">平均成绩：
+    </text>
+  </view>
+</view>
+
+<view class="c-minheight wx-view_section" data-c_e_id="wx_view_1295b15a">
+  <text class="c-block wx-text_section_title" data-c_e_id="wx_text3a248639">评价
+  </text>
+  <view class="commentlistitem" data-c_e_id="wx_view_16d0f86f">
+    <!--<navigator class="nav_userlink" data-c_e_id="wx_navigator2ffed891" hover-class="navigator-hover">
+      <view class="likeuser fm2" data-c_e_id="wx_viewd34d457a" />
+    </navigator>-->
+    <view class="c-minheight wx-view_WnUrtw" data-c_e_id="wx_view_66505bdf">
+      <view class="wx-view_three_scores">
+        <text class="wx-text_three_scores">1#</text>
+        <text class="wx-text_three_scores">收获：3/4</text>
+        <text class="wx-text_three_scores">难度：3/4</text>
+        <text class="wx-text_three_scores">成绩：3.0/4.0</text>
+      </view>
+      <!--<view class="wx-view_F9ISUC" data-c_e_id="wx_view27217bec">
+        <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator70eae9f8" hover-class="navigator-hover">
+          <text class="wx-text_71u3gA" data-c_e_id="wx_text5fe6919d"> 木卫二 </text>
+        </navigator>
+        <view class="wx-view_wrkAD7" data-c_e_id="wx_view_53be94ea">
+          <image class="wx-image_like" data-c_e_id="wx_image_d1caf161" src="http://qty83k.creatby.com/materials/origin/53a095f5786a4f0e1e50eea5ec5c84bc_origin.png" /> </view>
+      </view>-->
+      <text class="c-block wx-text_kGXxsa" data-c_e_id="wx_text_39bacddb"> 后半段太糟糕了。编导像发动起来的传送带，疯狂号召观众扔石头。但最致命的是完全放大了舞台剧改编电影的缺陷，情节推动靠走，人物性格全部靠吼。我绝不是拥护电影形式的圣徒，但也确实看不下“让语言飞”的偷懒与背离。至于讽刺，荒诞和反动之类的解读，难道大家都是当了太久外宾非得要恍然大悟嘛 </text>
+      <view class="comment_operate" data-c_e_id="wx_view_cf5ce19f">
+        <view class="wx-view_h6iSr9" data-c_e_id="wx_view3a8d0d4f">
+          <view class="commentlikebtn" data-c_e_id="wx_viewb3b5b6f1">
+            <image class="wx-image_like" data-c_e_id="wx_image0736d1e2" src="../../image/like.png" /> </view>
+          <!--<view class="commentreplybtn" data-c_e_id="wx_view9909114c">
+            <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" /> </view>-->
+        </view>
+        <text class="listitem_creattime" data-c_e_id="wx_text8c8804b3"> 2016.10.31 </text>
+      </view>
+    </view>
+  </view>
+  <!--<view class="commentlistitem" data-c_e_id="wx_viewfdd819fc">
+    <navigator class="nav_userlink" data-c_e_id="wx_navigator84100b0f" hover-class="navigator-hover">
+      <view class="likeuser fm2" data-c_e_id="wx_viewbe8cace4" />
+    </navigator>
+    <view class="c-minheight wx-view_WnUrtw" data-c_e_id="wx_viewa37957ba">
+      <view class="wx-view_F9ISUC" data-c_e_id="wx_viewf888eda1">
+        <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator8f40ea7e" hover-class="navigator-hover">
+          <text class="wx-text_71u3gA" data-c_e_id="wx_text8aa4b453"> 木芽 </text>
+        </navigator>
+        <view class="wx-view_wrkAD7" data-c_e_id="wx_viewd68c5671">
+          <image class="wx-image_like" data-c_e_id="wx_image9e0280d2" src="http://qty83k.creatby.com/materials/origin/53a095f5786a4f0e1e50eea5ec5c84bc_origin.png" /> </view>
+      </view>
+      <text class="c-block wx-text_kGXxsa" data-c_e_id="wx_textd27b6292"> 三颗星全给任素汐，她是中国最优秀的话剧女演员，有魂。她的巴掌都像是打在我的脸上。但是，建议导演改一下职务叫摄像吧，因为您只发挥了这个功能。 </text>
+      <view class="comment_operate" data-c_e_id="wx_viewa5cf1af7">
+        <view class="wx-view_h6iSr9" data-c_e_id="wx_view3abab834">
+          <view class="commentlikebtn" data-c_e_id="wx_viewbcda8029">
+            <image class="wx-image_like" data-c_e_id="wx_imagee7e5ea78" src="http://qty83k.creatby.com/materials/origin/2459ad45d8071985f1cf7f91f3b3df66_origin.png" /> </view>
+          <view class="commentreplybtn" data-c_e_id="wx_view39bc68d7">
+            <image class="wx-image_like" data-c_e_id="wx_image6143ad3b" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" /> </view>
+        </view>
+        <text class="listitem_creattime" data-c_e_id="wx_textf616b153"> 2016.10.29 </text>
+      </view>
+    </view>
+  </view>-->
+  <button bindtap="tap_277327c4" class="wx-button_zkPe8y" data-c_act_id="M_4789519541aba7eb" data-c_e_id="wx_button_4a8d9157" hover-class="button-hover" size="default" type="default">写评论
+  </button>
+</view>
