@@ -42,6 +42,7 @@ Page({
         })
     },
     onPullDownRefresh: function () {
+        var course = AV.Object.createWithoutData('Course', this.objectId);
         new AV.Query('TypeRate')
             .equalTo('course', course)
             .ascending('updatedAt')
