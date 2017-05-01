@@ -38,11 +38,11 @@ Page({
     toComment: function () {
         var that = this;
         wx.switchTab({
-            url: '../rate/index?'+'objectId='+that.objectId
+            url: '../rate/index?'+'objectId='+that.data.objectId
         })
     },
     onPullDownRefresh: function () {
-        var course = AV.Object.createWithoutData('Course', this.objectId);
+        var course = AV.Object.createWithoutData('Course', this.data.objectId);
         new AV.Query('TypeRate')
             .equalTo('course', course)
             .ascending('updatedAt')
