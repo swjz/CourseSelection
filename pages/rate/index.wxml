@@ -17,7 +17,7 @@
             <view class="weui-label">当前选择</view>
           </view>-->
           <view class="weui-cell__bd">
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{depts}}">
+            <picker name="dept" bindchange="bindPickerChange" value="{{index}}" range="{{depts}}">
               <view class="weui-input">{{depts[index]}}</view>
             </picker>
           </view>
@@ -28,7 +28,7 @@
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd">
-              <input class="weui-input" name="input" placeholder="" />
+              <input class="weui-input" name="courseName" placeholder="" />
           </view>
           </view>
       </view>
@@ -38,16 +38,16 @@
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd">
-              <input class="weui-input" name="input" placeholder="" />
+              <input class="weui-input" name="professorName" placeholder="" />
           </view>
           </view>
       </view>
     
       <view class="page-section page-section-gap">
         <view class="section-title">是否要求考勤</view>
-        <radio-group name="radio">
-          <label><radio value="radio1"/>是</label>
-          <label><radio value="radio2"/>否</label>
+        <radio-group name="attendance">
+          <label><radio value="attendanceRequired"/>是</label>
+          <label><radio value="attendanceOptional"/>否</label>
         </radio-group>
       </view>
 
@@ -65,14 +65,14 @@
         <view class="page-section page-section-gap">
         <view class="section-title">课程收获如何</view>
         <view class="body-view">
-            <slider value="100" bindchange="sliderGainChange" min="0" max="4" value="2" show-value/>
+            <slider name="gain" bindchange="sliderGainChange" min="0" max="4" value="2" show-value/>
         </view>
         </view>
         
         <view class="page-section page-section-gap">
         <view class="section-title">课程难度如何</view>
         <view class="body-view">
-            <slider value="100" bindchange="sliderDifficultyChange" min="0" max="4" value="2" show-value/>
+            <slider name="difficulty" bindchange="sliderDifficultyChange" min="0" max="4" value="2" show-value/>
         </view>
         </view>
 
@@ -89,7 +89,7 @@
 
       <view class="page-section page-section-gap">
         <view class="section-title">你的成绩</view>
-        <radio-group name="radio">
+        <radio-group name="grade">
           <label><radio value="radio43"/>A+</label>
           <label><radio value="radio40"/>A</label>
           <label><radio value="radio37"/>A-</label>
@@ -102,18 +102,18 @@
           <label><radio value="radio13"/>D+</label>
           <label><radio value="radio10"/>D</label>
           <label><radio value="radio00"/>F</label>
-          <label><radio value="radio1"/>P</label>
-          <label><radio value="radio3"/>未出 / 不愿透露</label>
+          <label><radio value="pass"/>P</label>
+          <label><radio value="na"/>未出 / 不愿透露</label>
         </radio-group>
       </view>
 
       <view class="page-section page-section-gap">
         <view class="section-title">课程属性</view>
-        <checkbox-group name="checkbox">
-          <label><checkbox value="checkbox1"/>文素课</label>
-          <label><checkbox value="checkbox2"/>文核课</label>
-          <label><checkbox value="checkbox3"/>英语课</label>
-          <label><checkbox value="checkbox4"/>读写 / 理工认证课</label>
+        <checkbox-group name="properties">
+          <label><checkbox value="wensu"/>文素课</label>
+          <label><checkbox value="wenhe"/>文核课</label>
+          <label><checkbox value="english"/>英语课</label>
+          <label><checkbox value="renzheng"/>读写 / 理工认证课</label>
         </checkbox-group>
       </view>
 
@@ -122,7 +122,7 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell">
             <view class="weui-cell__bd">
-              <textarea class="weui-textarea" name="textarea" auto-height maxlength="1000" placeholder="这课怎么样？(最多1000字)" />
+              <textarea class="weui-textarea" name="comment" auto-height maxlength="1000" placeholder="这课怎么样？(最多1000字)" />
             </view>
           </view>
         </view>
