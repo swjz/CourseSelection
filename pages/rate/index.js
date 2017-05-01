@@ -49,17 +49,60 @@ Page({
         'professorName', new RegExp('^'+thisCourse.professorName+'$','i'
       )).find().then(function(course){
         if(course.length>0){
+          // 这门课已存在
           rate.set('course', course[0]);
+          course[0].increment('numberOfRates', 1);
+          course[0].increment('totalGain', Number(e.detail.value.gain));
+          course[0].increment('totalDifficulty', Number(e.detail.value.difficulty));
+          if(e.detail.value.attendance=="attendanceRequired")
+          {
+            course[0].increment('totalAttendance', 1);
+          }
+          if(e.detail.value.grade!=-1){
+            course[0].increment('numberOfGrades', 1);
+            course[0].increment('totalGrade', Number(e.detail.value.grade));
+          }
+          course[0].set('avgGain', (course[0].attributes.totalGain / course[0].attributes.numberOfRates).toFixed(1));
+          course[0].set('avgGrade', (course[0].attributes.totalGrade / course[0].attributes.numberOfGrades).toFixed(1));
+          course[0].set('avgDifficulty', (course[0].attributes.totalDifficulty / course[0].attributes.numberOfRates).toFixed(1));
+          course[0].set('avgAttendance', (course[0].attributes.totalAttendance / course[0].attributes.numberOfRates*100).toFixed(0));
+          rate.set('order', course[0].attributes.numberOfRates); // 用 attributes 调用
           rate.save();
         }else{
+          // 这门课不存在
+          if(e.detail.value.attendance==="attendanceRequired")
+          {
+            courseObject.set('totalAttendance', 1);
+            courseObject.set('avgAttendance', 100);
+          }
+          else{
+            courseObject.set('totalAttendance', 0);
+            courseObject.set('avgAttendance', "0");
+          }
+          if(Number(e.detail.value.grade)!==-1){
+            courseObject.set('numberOfGrades', 1);
+          }
+          else{
+            courseObject.set('numberOfGrades', 0);
+          }
+
           courseObject.set('courseName', thisCourse.courseName);
           courseObject.set('dept', thisCourse.dept);
           courseObject.set('professorName', thisCourse.professorName);
-
+          courseObject.set('numberOfRates', 1);
+          courseObject.set('totalGain', Number(e.detail.value.gain));
+          courseObject.set('totalGrade', Number(e.detail.value.grade));
+          courseObject.set('totalDifficulty', Number(e.detail.value.difficulty));
+          courseObject.set('avgGain', Number(e.detail.value.gain).toFixed(1));
+          courseObject.set('avgGrade', Number(e.detail.value.grade).toFixed(1));
+          courseObject.set('avgDifficulty', Number(e.detail.value.difficulty).toFixed(1));
+          
+          rate.set('order', 1);
           rate.set('course', courseObject);
           rate.save();
         }
       }, function(error){
+        console.log("error!");
     });
     rate.set('attendance', e.detail.value.attendance);
     rate.set('comment', e.detail.value.comment);

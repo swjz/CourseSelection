@@ -90,20 +90,20 @@
       <view class="page-section page-section-gap">
         <view class="section-title">你的成绩</view>
         <radio-group name="grade">
-          <label><radio value="radio43"/>A+</label>
-          <label><radio value="radio40"/>A</label>
-          <label><radio value="radio37"/>A-</label>
-          <label><radio value="radio33"/>B+</label>
-          <label><radio value="radio30"/>B</label>
-          <label><radio value="radio27"/>B-</label>
-          <label><radio value="radio23"/>C+</label>
-          <label><radio value="radio20"/>C</label>
-          <label><radio value="radio17"/>C-</label>
-          <label><radio value="radio13"/>D+</label>
-          <label><radio value="radio10"/>D</label>
-          <label><radio value="radio00"/>F</label>
-          <label><radio value="pass"/>P</label>
-          <label><radio value="na"/>未出 / 不愿透露</label>
+          <label><radio value="4.0"/>A+</label>
+          <label><radio value="4.0"/>A</label>
+          <label><radio value="3.7"/>A-</label>
+          <label><radio value="3.3"/>B+</label>
+          <label><radio value="3.0"/>B</label>
+          <label><radio value="2.7"/>B-</label>
+          <label><radio value="2.3"/>C+</label>
+          <label><radio value="2.0"/>C</label>
+          <label><radio value="1.7"/>C-</label>
+          <label><radio value="1.3"/>D+</label>
+          <label><radio value="1.0"/>D</label>
+          <label><radio value="0.0"/>F</label>
+          <label><radio value="-1"/>P</label>
+          <label><radio value="-1"/>未出 / 不愿透露</label>
         </radio-group>
       </view>
 
