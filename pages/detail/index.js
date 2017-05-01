@@ -17,13 +17,11 @@ Page({
             course: course
         });
         new AV.Query('TypeRate')
-          .equalTo('course', course)
-          .ascending('updatedAt')
-          .find()
-          .then(rates => this.setData({ rates }))
-          .catch(console.error);
-        console.log(course);
-        console.log("course");
+            .equalTo('course', course)
+            .ascending('updatedAt')
+            .find()
+            .then(rates => this.setData({ rates }))
+            .catch(console.error);
     },
     onReady: function () {
         // 页面渲染完成
@@ -38,8 +36,18 @@ Page({
         // 页面关闭
     },
     toComment: function () {
+        var that = this;
         wx.switchTab({
-            url: '../rate/index'
+            url: '../rate/index?'+'objectId='+that.objectId
         })
+    },
+    onPullDownRefresh: function () {
+        new AV.Query('TypeRate')
+            .equalTo('course', course)
+            .ascending('updatedAt')
+            .find()
+            .then(rates => this.setData({ rates }))
+            .catch(console.error);
+        wx.stopPullDownRefresh();
     }
 })
