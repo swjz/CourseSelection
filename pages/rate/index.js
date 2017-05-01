@@ -78,5 +78,8 @@ Page({
     }, function (error) {
       console.error(error);
     });
+  },
+  onPullDownRefresh: function(){
+    wx.stopPullDownRefresh();
   }
 })

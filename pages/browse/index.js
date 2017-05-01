@@ -53,5 +53,13 @@ Page({
     wx.navigateTo({
       url: '../detail/index'
     })
+  },
+  onPullDownRefresh: function(){
+    new AV.Query('Course')
+      .descending('updatedAt')
+      .find()
+      .then(courses => this.setData({ courses }))
+      .catch(console.error);
+    wx.stopPullDownRefresh();
   }
 });
