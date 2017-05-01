@@ -2,13 +2,18 @@
 Page({
   data: {
         inputShowed: false,
-        inputVal: ""
+        inputVal: "",
+        courses: []
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },
-  onReady:function(){
-    // 页面渲染完成
+  onReady:function() {
+    new AV.Query('Course')
+      .descending('updatedAt')
+      .find()
+      .then(courses => this.setData({ courses }))
+      .catch(console.error);
   },
   onShow:function(){
     // 页面显示

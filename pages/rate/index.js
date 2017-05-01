@@ -32,7 +32,42 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
     var Rate = AV.Object.extend('TypeRate');
     var rate = new Rate();
-    rate.set('value', e.detail.value);
+    var Course = AV.Object.extend('Course');
+    var courseObject = new Course();
+    
+    var thisCourse = {
+      courseName: e.detail.value.courseName,
+      dept: e.detail.value.dept,
+      professorName: e.detail.value.professorName
+    };
+    
+    new AV.Query(Course).matches(
+        'courseName', new RegExp('^'+thisCourse.courseName+'$','i'
+      )).matches(
+        'dept', new RegExp('^'+thisCourse.dept+'$','i'
+      )).matches(
+        'professorName', new RegExp('^'+thisCourse.professorName+'$','i'
+      )).find().then(function(course){
+        if(course.length>0){
+          rate.set('course', course[0]);
+          rate.save();
+        }else{
+          courseObject.set('courseName', thisCourse.courseName);
+          courseObject.set('dept', thisCourse.dept);
+          courseObject.set('professorName', thisCourse.professorName);
+
+          rate.set('course', courseObject);
+          rate.save();
+        }
+      }, function(error){
+      });
+    rate.set('attendance', e.detail.value.attendance);
+    rate.set('comment', e.detail.value.comment);
+    rate.set('gain', Number(e.detail.value.gain));
+    rate.set('grade', e.detail.value.grade);
+    rate.set('comment', e.detail.value.comment);
+    rate.set('difficulty', Number(e.detail.value.difficulty));
+
     rate.save().then(function (thisRate) {
       console.log('objectId is ' + thisRate.id);
       wx.showToast({

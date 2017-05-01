@@ -45,6 +45,15 @@
   <view class="weui-panel weui-panel_access">
 
     <!--<view class="weui-panel__hd">文字组合列表</view>-->
+
+    <view class="weui-panel__bd">
+      <view wx:for="{{courses}}" wx:for-item="course" wx:key="objectId" bindtap="toDetail" class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title">{{course.courseName}}</view>
+        <view class="wx-professor">{{course.professorName}}</view>
+        <view class="weui-media-box__desc">课程收获：{{course.avgGain}}/4.0 课程难度：{{course.avgDifficulty}}/4.0 平均成绩：{{course.avgGrade}}/4.0</view>
+      </view>
+    </view>
+
     <view class="weui-panel__bd">
       <view bindtap="toDetail" class="weui-media-box weui-media-box_text">
         <view class="weui-media-box__title">计算机组成与系统结构</view>

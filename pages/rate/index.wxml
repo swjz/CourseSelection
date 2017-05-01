@@ -107,7 +107,7 @@
         </radio-group>
       </view>
 
-      <view class="page-section page-section-gap">
+      <!--<view class="page-section page-section-gap">
         <view class="section-title">课程属性</view>
         <checkbox-group name="properties">
           <label><checkbox value="wensu"/>文素课</label>
@@ -115,7 +115,7 @@
           <label><checkbox value="english"/>英语课</label>
           <label><checkbox value="renzheng"/>读写 / 理工认证课</label>
         </checkbox-group>
-      </view>
+      </view>-->
 
 
         <view class="weui-cells__title">你的评价</view>
