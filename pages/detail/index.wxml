@@ -3,37 +3,37 @@
 <import src="../common/head.wxml" />
 <import src="../common/foot.wxml" />
 <view class="page">
-  <view class="c-minheight wx-view_movie_info" data-c_e_id="wx_view_22939a03">
+  <view class="c-minheight wx-view_movie_info">
     <!--<view class="c-minheight wx-view_movie_score" data-c_e_id="wx_view_3d6933f0">
       <text class="c-block wx-text_score_value" data-c_e_id="wx_text_20ab13fe">8.4</text>
 
       <text class="c-block wx-text_score_stars" data-c_e_id="wx_text_d07763e8"></text>
       <text class="c-block wx-text_score_uv" data-c_e_id="wx_text_b439aa5b"> 34776人</text>
     </view>-->
-    <text class="c-block wx-text_title" data-c_e_id="wx_text_55c207ca">计算机组成与系统结构
+    <text class="c-block wx-text_title">{{course.courseName}}
       <br/>
     </text>
-    <text class="c-block wx-text_professor">陈文光 - 计算机系
+    <text class="c-block wx-text_professor">{{course.professorName}} - {{course.dept}}
     </text>
-    <text class="c-block wx-text_description">课程收获：
+    <text class="c-block wx-text_description">课程收获：{{course.avgGain}}/4.0
     </text>
-    <text class="c-block wx-text_description">课程难度：
+    <text class="c-block wx-text_description">课程难度：{{course.avgDifficulty}}/4.0
     </text>
-    <text class="c-block wx-text_description">平均成绩：
+    <text class="c-block wx-text_description">平均成绩：{{course.avgGrade}}/4.0
     </text>
-    <text class="c-block wx-text_description">0% 的同学认为这门课要求考勤
+    <text class="c-block wx-text_description">{{course.avgAttendance}}% 的同学认为这门课要求考勤
     </text>
   </view>
 </view>
 
-<view class="c-minheight wx-view_section" data-c_e_id="wx_view_1295b15a">
-  <text class="c-block wx-text_section_title" data-c_e_id="wx_text3a248639">评价
+<view class="c-minheight wx-view_section">
+  <text class="c-block wx-text_section_title">评价
   </text>
-  <view class="commentlistitem" data-c_e_id="wx_view_16d0f86f">
+  <view class="commentlistitem">
     <!--<navigator class="nav_userlink" data-c_e_id="wx_navigator2ffed891" hover-class="navigator-hover">
       <view class="likeuser fm2" data-c_e_id="wx_viewd34d457a" />
     </navigator>-->
-    <view class="c-minheight wx-view_WnUrtw" data-c_e_id="wx_view_66505bdf">
+    <view class="c-minheight wx-view_WnUrtw">
       <view class="wx-view_three_scores">
         <text class="wx-text_three_scores">1#</text>
         <text class="wx-text_three_scores">收获：3/4</text>
@@ -47,15 +47,15 @@
         <view class="wx-view_wrkAD7" data-c_e_id="wx_view_53be94ea">
           <image class="wx-image_like" data-c_e_id="wx_image_d1caf161" src="http://qty83k.creatby.com/materials/origin/53a095f5786a4f0e1e50eea5ec5c84bc_origin.png" /> </view>
       </view>-->
-      <text class="c-block wx-text_kGXxsa" data-c_e_id="wx_text_39bacddb"> 后半段太糟糕了。编导像发动起来的传送带，疯狂号召观众扔石头。但最致命的是完全放大了舞台剧改编电影的缺陷，情节推动靠走，人物性格全部靠吼。我绝不是拥护电影形式的圣徒，但也确实看不下“让语言飞”的偷懒与背离。至于讽刺，荒诞和反动之类的解读，难道大家都是当了太久外宾非得要恍然大悟嘛 </text>
-      <view class="comment_operate" data-c_e_id="wx_view_cf5ce19f">
-        <view class="wx-view_h6iSr9" data-c_e_id="wx_view3a8d0d4f">
-          <view class="commentlikebtn" data-c_e_id="wx_viewb3b5b6f1">
-            <image class="wx-image_like" data-c_e_id="wx_image0736d1e2" src="../../image/like.png" /> </view>
+      <text class="c-block wx-text_kGXxsa"> 后半段太糟糕了。编导像发动起来的传送带，疯狂号召观众扔石头。但最致命的是完全放大了舞台剧改编电影的缺陷，情节推动靠走，人物性格全部靠吼。我绝不是拥护电影形式的圣徒，但也确实看不下“让语言飞”的偷懒与背离。至于讽刺，荒诞和反动之类的解读，难道大家都是当了太久外宾非得要恍然大悟嘛 </text>
+      <view class="comment_operate">
+        <view class="wx-view_h6iSr9">
+          <view class="commentlikebtn">
+            <image class="wx-image_like" src="../../image/like.png" /> </view>
           <!--<view class="commentreplybtn" data-c_e_id="wx_view9909114c">
             <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" /> </view>-->
         </view>
-        <text class="listitem_creattime" data-c_e_id="wx_text8c8804b3"> 2016.10.31 </text>
+        <text class="listitem_creattime"> 2016.10.31 </text>
       </view>
     </view>
   </view>

@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/browse/index",
-    "pages/rate/index",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/rate/index"
   ],
   "window":{
     "backgroundTextStyle":"dark",

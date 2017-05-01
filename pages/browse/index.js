@@ -50,10 +50,10 @@ Page({
           inputVal: e.detail.value
       });
   },
-  toDetail: function() {
+  toDetail: function(e) {
     wx.navigateTo({
-      url: '../detail/index'
-    })
+      url: '../detail/index?'+'objectId='+e.currentTarget.dataset.id
+    });
   },
   onPullDownRefresh: function(){
     new AV.Query('Course')

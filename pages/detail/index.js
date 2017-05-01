@@ -1,6 +1,29 @@
+// pages/detail/index.js
+
+const AV = require('../../libs/av-weapp-min.js');
+
 Page({
+    data: {
+        rates: [],
+        objectId: "",
+        course: {}
+    },
     onLoad: function (options) {
         // 页面初始化 options为页面跳转所带来的参数
+        var course = AV.Object.createWithoutData('Course', options.objectId);
+        course.fetch().then(course => this.setData({ course })); // 将 course 数据绑定
+        this.setData({
+            objectId: options.objectId,
+            course: course
+        });
+        new AV.Query('TypeRate')
+          .equalTo('course', course)
+          .ascending('updatedAt')
+          .find()
+          .then(rates => this.setData({ rates }))
+          .catch(console.error);
+        console.log(course);
+        console.log("course");
     },
     onReady: function () {
         // 页面渲染完成
@@ -19,4 +42,4 @@ Page({
             url: '../rate/index'
         })
     }
-});
+})
