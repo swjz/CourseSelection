@@ -60,7 +60,7 @@ Page({
           rate.save();
         }
       }, function(error){
-      });
+    });
     rate.set('attendance', e.detail.value.attendance);
     rate.set('comment', e.detail.value.comment);
     rate.set('gain', Number(e.detail.value.gain));

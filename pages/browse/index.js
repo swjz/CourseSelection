@@ -1,4 +1,7 @@
 // pages/browse/index.js
+
+const AV = require('../../libs/av-weapp-min.js');
+
 Page({
   data: {
         inputShowed: false,
@@ -24,7 +27,7 @@ Page({
   onUnload:function(){
     // 页面关闭
   },
-    
+
   showInput: function () {
       this.setData({
           inputShowed: true

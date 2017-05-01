@@ -49,12 +49,12 @@
     <view class="weui-panel__bd">
       <view wx:for="{{courses}}" wx:for-item="course" wx:key="objectId" bindtap="toDetail" class="weui-media-box weui-media-box_text">
         <view class="weui-media-box__title">{{course.courseName}}</view>
-        <view class="wx-professor">{{course.professorName}}</view>
+        <view class="wx-professor">{{course.professorName}} - {{course.dept}}</view>
         <view class="weui-media-box__desc">课程收获：{{course.avgGain}}/4.0 课程难度：{{course.avgDifficulty}}/4.0 平均成绩：{{course.avgGrade}}/4.0</view>
       </view>
     </view>
 
-    <view class="weui-panel__bd">
+    <!--<view class="weui-panel__bd">
       <view bindtap="toDetail" class="weui-media-box weui-media-box_text">
         <view class="weui-media-box__title">计算机组成与系统结构</view>
         <view class="wx-professor">陈文光 - 计算机系</view>
@@ -75,7 +75,8 @@
         <view class="wx-professor">钟笑寒 - 经管学院</view>
         <view class="weui-media-box__desc">课程收获：3.5/4.0 课程难度：3.3/4.0 平均成绩：3.0/4.0</view>
       </view>
-    </view>
+    </view>-->
+
 
     <!--<view class="weui-loadmore">
             <view class="weui-loading"></view>
@@ -98,39 +99,5 @@
         </view>-->
   </view>
 
-  <!--<view class="page-section">
-      <view class="page-section-title">
-        <text>计算机组成与系统结构</text>
-      </view>
-      <view class="page-section-spacing">
-      <text>课程收获：4.0/4.0
-      课程难度：3.9/4.0
-      平均成绩：3.15/4.0
-      </text>
-      </view>
-  </view>-->
-
-  <!--<view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: row\n横向布局</text>
-      </view>
-      <view class="page-section-spacing">
-        <view class="flex-wrp" style="flex-direction:row;">
-          <view class="flex-item demo-text-1"></view>
-          <view class="flex-item demo-text-2"></view>
-          <view class="flex-item demo-text-3"></view>
-        </view>
-      </view>
-    </view>
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: column\n纵向布局</text>
-      </view>
-      <view class="flex-wrp" style="flex-direction:column;">
-        <view class="flex-item flex-item-V demo-text-1"></view>
-        <view class="flex-item flex-item-V demo-text-2"></view>
-        <view class="flex-item flex-item-V demo-text-3"></view>
-      </view>
-    </view>-->
   <template is="foot" />
 </view>
