@@ -47,7 +47,7 @@
     <!--<view class="weui-panel__hd">文字组合列表</view>-->
 
     <view class="weui-panel__bd">
-      <view wx:for="{{courses}}" wx:for-item="course" wx:key="objectId" bindtap="toDetail" class="weui-media-box weui-media-box_text">
+      <view wx:for="{{courses}}" wx:for-item="course" wx:key="objectId" class="weui-media-box weui-media-box_text">
         <view data-id="{{course.objectId}}" bindtap="toDetail">
           <view class="weui-media-box__title">{{course.courseName}}</view>
           <view class="wx-professor">{{course.professorName}} - {{course.dept}}</view>

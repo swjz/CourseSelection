@@ -29,17 +29,18 @@
 <view class="c-minheight wx-view_section">
   <text class="c-block wx-text_section_title">评价
   </text>
-  <view class="commentlistitem">
+
     <!--<navigator class="nav_userlink" data-c_e_id="wx_navigator2ffed891" hover-class="navigator-hover">
       <view class="likeuser fm2" data-c_e_id="wx_viewd34d457a" />
     </navigator>-->
-    <view class="c-minheight wx-view_WnUrtw">
-      <view class="wx-view_three_scores">
-        <text class="wx-text_three_scores">1#</text>
-        <text class="wx-text_three_scores">收获：3/4</text>
-        <text class="wx-text_three_scores">难度：3/4</text>
-        <text class="wx-text_three_scores">成绩：3.0/4.0</text>
-      </view>
+    <view wx:for="{{rates}}" wx:for-item="rate" wx:key="objectId" class="commentlistitem">
+      <view class="c-minheight wx-view_WnUrtw" data-c_e_id="wx_viewa37957ba">
+        <view class="wx-view_three_scores">
+          <text class="wx-text_three_scores">{{rate.order}}#</text>
+          <text class="wx-text_three_scores">收获：{{rate.gain}}/4</text>
+          <text class="wx-text_three_scores">难度：{{rate.difficulty}}/4</text>
+          <text class="wx-text_three_scores">成绩：{{rate.grade}}/4.0</text>
+        </view>
       <!--<view class="wx-view_F9ISUC" data-c_e_id="wx_view27217bec">
         <navigator class="wx-navigator_wTcTS2" data-c_e_id="wx_navigator70eae9f8" hover-class="navigator-hover">
           <text class="wx-text_71u3gA" data-c_e_id="wx_text5fe6919d"> 木卫二 </text>
@@ -47,18 +48,19 @@
         <view class="wx-view_wrkAD7" data-c_e_id="wx_view_53be94ea">
           <image class="wx-image_like" data-c_e_id="wx_image_d1caf161" src="http://qty83k.creatby.com/materials/origin/53a095f5786a4f0e1e50eea5ec5c84bc_origin.png" /> </view>
       </view>-->
-      <text class="c-block wx-text_kGXxsa"> 后半段太糟糕了。编导像发动起来的传送带，疯狂号召观众扔石头。但最致命的是完全放大了舞台剧改编电影的缺陷，情节推动靠走，人物性格全部靠吼。我绝不是拥护电影形式的圣徒，但也确实看不下“让语言飞”的偷懒与背离。至于讽刺，荒诞和反动之类的解读，难道大家都是当了太久外宾非得要恍然大悟嘛 </text>
-      <view class="comment_operate">
-        <view class="wx-view_h6iSr9">
-          <view class="commentlikebtn">
-            <image class="wx-image_like" src="../../image/like.png" /> </view>
-          <!--<view class="commentreplybtn" data-c_e_id="wx_view9909114c">
-            <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" /> </view>-->
+        <text class="c-block wx-text_kGXxsa"> {{rate.comment}} </text>
+        <view class="comment_operate">
+          <view class="wx-view_h6iSr9">
+            <view class="commentlikebtn">
+              <image class="wx-image_like" src="../../image/like.png" /> </view>
+            <!--<view class="commentreplybtn" data-c_e_id="wx_view9909114c">
+              <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" /> </view>-->
+          </view>
+          <text class="listitem_creattime"> {{rate.updatedAt}} </text>
         </view>
-        <text class="listitem_creattime"> 2016.10.31 </text>
       </view>
     </view>
-  </view>
+
   <!--<view class="commentlistitem" data-c_e_id="wx_viewfdd819fc">
     <navigator class="nav_userlink" data-c_e_id="wx_navigator84100b0f" hover-class="navigator-hover">
       <view class="likeuser fm2" data-c_e_id="wx_viewbe8cace4" />
