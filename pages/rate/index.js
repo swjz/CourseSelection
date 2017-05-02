@@ -149,7 +149,7 @@ Page({
               courseObject.set('totalAttendance', 0);
               courseObject.set('avgAttendance', "0");
             }
-            if (Number(e.detail.value.grade) !== -1) {
+            if (Number(e.detail.value.grade) !== "NA") {
               courseObject.set('numberOfGrades', 1);
             } else {
               courseObject.set('numberOfGrades', 0);
