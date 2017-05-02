@@ -1,6 +1,7 @@
 // pages/browse/index.js
 
 const AV = require('../../libs/av-weapp-min.js');
+var app = getApp();
 
 Page({
   data: {
@@ -53,6 +54,12 @@ Page({
   toDetail: function(e) {
     wx.navigateTo({
       url: '../detail/index?'+'objectId='+e.currentTarget.dataset.id
+    });
+  },
+  addCourse: function(e){
+    app.globalData.course=null;
+    wx.navigateTo({
+      url: '../rate/index'
     });
   },
   onPullDownRefresh: function(){

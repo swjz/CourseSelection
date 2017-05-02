@@ -42,6 +42,10 @@
       </view>
     </navigator>
   </view>
+
+  <view class="button-area">
+    <button type="default" bindtap="addCourse">添加课程</button>
+  </view>
   <view class="weui-panel weui-panel_access">
 
     <!--<view class="weui-panel__hd">文字组合列表</view>-->

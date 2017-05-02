@@ -36,3 +36,10 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
+.button-area{
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+}
+

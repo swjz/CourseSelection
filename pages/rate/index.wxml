@@ -18,7 +18,7 @@
           </view>-->
           <view class="weui-cell__bd">
             <!--这里的 value 并不是 Number-->
-            <picker name="dept" bindchange="bindPickerChange" value="{{depts[index]}}" range="{{depts}}">
+            <picker name="dept" bindchange="bindPickerChange" value="{{depts[index]}}" range="{{depts}}" disabled="{{disabled}}">
               <view class="weui-input">{{depts[index]}}</view>
             </picker>
           </view>
@@ -29,7 +29,7 @@
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd">
-              <input class="weui-input" name="courseName" value="{{course.courseName}}" placeholder="" />
+              <input class="weui-input" name="courseName" value="{{course.courseName}}" disabled="{{disabled}}" placeholder="" />
           </view>
           </view>
       </view>
@@ -39,7 +39,7 @@
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd">
-              <input class="weui-input" name="professorName" value="{{course.professorName}}" placeholder="" />
+              <input class="weui-input" name="professorName" value="{{course.professorName}}" disabled="{{disabled}}" placeholder="" />
           </view>
           </view>
       </view>
@@ -103,8 +103,8 @@
           <label><radio value="1.3"/>D+</label>
           <label><radio value="1.0"/>D</label>
           <label><radio value="0.0"/>F</label>
-          <label><radio value="-1"/>P</label>
-          <label><radio value="-1"/>未出 / 不愿透露</label>
+          <label><radio value="NA"/>P</label>
+          <label><radio value="NA"/>未出 / 不愿透露</label>
         </radio-group>
       </view>
 

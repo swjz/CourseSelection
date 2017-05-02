@@ -17,18 +17,19 @@ Page({
             objectId: options.objectId,
             course: course
         });
-        new AV.Query('TypeRate')
-            .equalTo('course', course)
-            .ascending('updatedAt')
-            .find()
-            .then(rates => this.setData({ rates }))
-            .catch(console.error);
     },
     onReady: function () {
         // 页面渲染完成
     },
     onShow: function () {
         // 页面显示
+        var course = AV.Object.createWithoutData('Course', this.data.objectId);
+        new AV.Query('TypeRate')
+            .equalTo('course', course)
+            .ascending('updatedAt')
+            .find()
+            .then(rates => this.setData({ rates }))
+            .catch(console.error);
     },
     onHide: function () {
         // 页面隐藏
@@ -39,7 +40,7 @@ Page({
     toComment: function () {
         var that = this;
         app.globalData.course = this.data.course;
-        wx.switchTab({
+        wx.navigateTo({
             url: '../rate/index?'+'objectId='+that.data.objectId
         })
     },
