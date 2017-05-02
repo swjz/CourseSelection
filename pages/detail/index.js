@@ -1,6 +1,7 @@
 // pages/detail/index.js
 
 const AV = require('../../libs/av-weapp-min.js');
+var app = getApp();
 
 Page({
     data: {
@@ -37,6 +38,7 @@ Page({
     },
     toComment: function () {
         var that = this;
+        app.globalData.course = this.data.course;
         wx.switchTab({
             url: '../rate/index?'+'objectId='+that.data.objectId
         })

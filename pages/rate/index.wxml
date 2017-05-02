@@ -28,7 +28,7 @@
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd">
-              <input class="weui-input" name="courseName" placeholder="" />
+              <input class="weui-input" name="courseName" value="{{course.courseName}}" placeholder="" />
           </view>
           </view>
       </view>
@@ -38,7 +38,7 @@
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
           <view class="weui-cell__bd">
-              <input class="weui-input" name="professorName" placeholder="" />
+              <input class="weui-input" name="professorName" value="{{course.professorName}}" placeholder="" />
           </view>
           </view>
       </view>
