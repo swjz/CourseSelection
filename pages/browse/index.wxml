@@ -55,7 +55,7 @@
         <view data-id="{{course.objectId}}" bindtap="toDetail">
           <view class="weui-media-box__title">{{course.courseName}}</view>
           <view class="wx-professor">{{course.professorName}} - {{course.dept}}</view>
-          <view class="weui-media-box__desc">课程收获：{{course.avgGain}}/4.0 课程难度：{{course.avgDifficulty}}/4.0 平均成绩：{{course.avgGrade}}/4.0</view>
+          <view class="weui-media-box__desc">课程收获：{{course.avgGain}}/5.0 课程难度：{{course.avgDifficulty}}/5.0 平均成绩：{{course.avgGrade}}/4.0</view>
         </view>
       </view>
     </view>

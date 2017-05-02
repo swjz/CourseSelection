@@ -66,14 +66,14 @@
         <view class="page-section page-section-gap">
         <view class="section-title">课程收获如何</view>
         <view class="body-view">
-            <slider name="gain" bindchange="sliderGainChange" min="0" max="4" value="2" show-value/>
+            <slider name="gain" bindchange="sliderGainChange" min="0" max="5" value="2" show-value/>
         </view>
         </view>
         
         <view class="page-section page-section-gap">
         <view class="section-title">课程难度如何</view>
         <view class="body-view">
-            <slider name="difficulty" bindchange="sliderDifficultyChange" min="0" max="4" value="2" show-value/>
+            <slider name="difficulty" bindchange="sliderDifficultyChange" min="0" max="5" value="2" show-value/>
         </view>
         </view>
 
