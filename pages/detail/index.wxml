@@ -34,7 +34,7 @@
       <view class="likeuser fm2" data-c_e_id="wx_viewd34d457a" />
     </navigator>-->
     <view wx:for="{{rates}}" wx:for-item="rate" wx:key="objectId" class="commentlistitem">
-      <view class="c-minheight wx-view_WnUrtw" data-c_e_id="wx_viewa37957ba">
+      <view class="c-minheight wx-view_WnUrtw">
         <view class="wx-view_three_scores">
           <text class="wx-text_three_scores">{{rate.order}}#</text>
           <text class="wx-text_three_scores">收获：{{rate.gain}}/4</text>
@@ -48,13 +48,15 @@
         <view class="wx-view_wrkAD7" data-c_e_id="wx_view_53be94ea">
           <image class="wx-image_like" data-c_e_id="wx_image_d1caf161" src="http://qty83k.creatby.com/materials/origin/53a095f5786a4f0e1e50eea5ec5c84bc_origin.png" /> </view>
       </view>-->
-        <text class="c-block wx-text_kGXxsa"> {{rate.comment}} </text>
+        <text class="c-block d-minheight wx-text_kGXxsa"> {{rate.comment}} </text>
         <view class="comment_operate">
           <view class="wx-view_h6iSr9">
-            <view class="commentlikebtn">
-              <image class="wx-image_like" src="../../image/like.png" /> </view>
-            <!--<view class="commentreplybtn" data-c_e_id="wx_view9909114c">
-              <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" /> </view>-->
+            <!--<view class="commentlikebtn" bindtap="tapLike" data-likeid="{{rate.objectId}}">
+              <image class="wx-image_like" src="../../image/like.png" />
+            </view>
+            <view class="commentreplybtn" data-c_e_id="wx_view9909114c">
+              <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" />
+            </view>-->
           </view>
           <text class="listitem_creattime"> {{rate.updatedAt}} </text>
         </view>

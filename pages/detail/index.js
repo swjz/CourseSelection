@@ -43,6 +43,10 @@ Page({
             url: '../rate/index?'+'objectId='+that.data.objectId
         })
     },
+    tapLike: function(e){
+        var thisRate = AV.Object.createWithoutData('TypeRate', e.currentTarget.dataset.likeid);
+        thisRate.increment('numberOfLikes');
+    },
     onPullDownRefresh: function () {
         var course = AV.Object.createWithoutData('Course', this.data.objectId);
         new AV.Query('TypeRate')

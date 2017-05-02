@@ -163,6 +163,7 @@ Page({
       rate.set('grade', e.detail.value.grade);
       rate.set('comment', e.detail.value.comment);
       rate.set('difficulty', Number(e.detail.value.difficulty));
+      rate.set('numberOfLikes', 0);
 
       rate.save().then(function (thisRate) {
         console.log('objectId is ' + thisRate.id);

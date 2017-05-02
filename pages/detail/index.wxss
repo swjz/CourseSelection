@@ -2,6 +2,10 @@
   min-height: 80px;
 }
 
+.d-minheight {
+  min-height: 20px;
+}
+
 .c-block {
   display: block;
 }
@@ -94,7 +98,7 @@
 
 .commentlistitem {
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .wx-view_WnUrtw {
@@ -106,7 +110,7 @@
   font-size: 13px;
   color: rgb(84, 84, 84);
   line-height: 1.5em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .listitem_creattime {
