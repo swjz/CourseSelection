@@ -17,6 +17,7 @@
             <view class="weui-label">当前选择</view>
           </view>-->
           <view class="weui-cell__bd">
+            <!--这里的 value 并不是 Number-->
             <picker name="dept" bindchange="bindPickerChange" value="{{depts[index]}}" range="{{depts}}">
               <view class="weui-input">{{depts[index]}}</view>
             </picker>

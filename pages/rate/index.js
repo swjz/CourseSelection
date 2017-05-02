@@ -131,10 +131,24 @@ Page({
 
     rate.save().then(function (thisRate) {
       console.log('objectId is ' + thisRate.id);
-      wx.showToast({
-        title: '提交成功',
-        icon: 'success',
-        duration: 2000
+      console.log('Course objectId is ' + thisRate.attributes.course.id);
+      
+
+      wx.navigateTo({
+        url: '../detail/index?'+'objectId='+thisRate.attributes.course.id,
+        success: function(res){
+          wx.showToast({
+            title: '提交成功',
+            icon: 'success',
+            duration: 2000
+          })
+        },
+        fail: function(res) {
+          // fail
+        },
+        complete: function(res) {
+          // complete
+        }
       })
     }, function (error) {
       console.error(error);
