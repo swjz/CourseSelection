@@ -15,7 +15,7 @@ Page({
         course.fetch().then(course => this.setData({ course })); // 将 course 数据绑定
         this.setData({
             objectId: options.objectId,
-            course: course
+            // course: course // 是否有必要？
         });
     },
     onReady: function () {
@@ -24,6 +24,7 @@ Page({
     onShow: function () {
         // 页面显示
         var course = AV.Object.createWithoutData('Course', this.data.objectId);
+        course.fetch().then(course => this.setData({ course })); // 将 course 数据绑定
         new AV.Query('TypeRate')
             .equalTo('course', course)
             .ascending('updatedAt')
@@ -50,6 +51,7 @@ Page({
     },
     onPullDownRefresh: function () {
         var course = AV.Object.createWithoutData('Course', this.data.objectId);
+        course.fetch().then(course => this.setData({ course })); // 将 course 数据绑定
         new AV.Query('TypeRate')
             .equalTo('course', course)
             .ascending('updatedAt')

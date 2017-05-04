@@ -123,7 +123,7 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell">
             <view class="weui-cell__bd">
-              <textarea class="weui-textarea" name="comment" auto-height maxlength="1000" placeholder="这课怎么样？(最多1000字)" />
+              <textarea class="weui-textarea" name="comment" auto-height maxlength="1000" placeholder="这课怎么样？(可选，最多1000字)" />
             </view>
           </view>
         </view>

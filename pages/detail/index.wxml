@@ -15,11 +15,11 @@
     </text>
     <text class="c-block wx-text_professor">{{course.professorName}} - {{course.dept}}
     </text>
-    <text class="c-block wx-text_description">课程收获：{{course.avgGain}}/5.0
+    <text class="c-block wx-text_description">课程收获：{{course.avgGain}}/10.0
     </text>
-    <text class="c-block wx-text_description">课程难度：{{course.avgDifficulty}}/5.0
+    <text class="c-block wx-text_description">课程难度：{{course.avgDifficulty}}/10.0
     </text>
-    <text class="c-block wx-text_description">平均成绩：{{course.avgGrade}}/5.0
+    <text class="c-block wx-text_description">平均成绩：{{course.avgGrade}}/4.0
     </text>
     <text class="c-block wx-text_description">{{course.avgAttendance}}% 的同学认为这门课要求考勤
     </text>

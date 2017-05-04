@@ -18,9 +18,9 @@
 - [ ] 分享菜单
 - [ ] 意见反馈
 - [x] 改 tabBar 图标
-- [ ] 修复 grade string 无法做加法(parse to number)的 bug
-- [ ] detail 页刷新的时候把上面的平均分也刷新一下
-- [ ] 平均成绩 0.0 和 NaN 的 bug
-- [ ] 调宽三项评分间距
-- [ ] 难度和收获改成10分制
+- [x] 修复 grade string 无法做加法(parse to number)的 bug
+- [x] detail 页刷新的时候把上面的平均分也刷新一下
+- [x] 平均成绩 0.0 和 NaN 的 bug
+- [x] 调宽三项评分间距
+- [x] 难度和收获改成10分制
 - [ ] 100楼以上的测试

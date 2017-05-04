@@ -132,11 +132,15 @@ Page({
             }
             if (e.detail.value.grade != "NA") {
               course[0].increment('numberOfGrades', 1);
-              course[0].increment('totalGrade', Number(e.detail.value.grade));
+              if(course[0].attributes.totalGrade===null){
+                course[0].attributes.totalGrade = Number(e.detail.value.grade);
+              } else {
+                course[0].increment('totalGrade', Number(e.detail.value.grade));
+              }
             }
-            course[0].set('avgGain', (course[0].attributes.totalGain / course[0].attributes.numberOfRates).toFixed(1));
+            course[0].set('avgGain', (course[0].attributes.totalGain * 2 / course[0].attributes.numberOfRates).toFixed(1));
             course[0].set('avgGrade', (course[0].attributes.totalGrade / course[0].attributes.numberOfGrades).toFixed(1));
-            course[0].set('avgDifficulty', (course[0].attributes.totalDifficulty / course[0].attributes.numberOfRates).toFixed(1));
+            course[0].set('avgDifficulty', (course[0].attributes.totalDifficulty * 2 / course[0].attributes.numberOfRates).toFixed(1));
             course[0].set('avgAttendance', (course[0].attributes.totalAttendance / course[0].attributes.numberOfRates * 100).toFixed(0));
             rate.set('order', course[0].attributes.numberOfRates); // 用 attributes 调用
             rate.save();
@@ -144,7 +148,7 @@ Page({
             // 这门课不存在
             if (e.detail.value.attendance === "attendanceRequired") {
               courseObject.set('totalAttendance', 1);
-              courseObject.set('avgAttendance', 100);
+              courseObject.set('avgAttendance', "100");
             } else {
               courseObject.set('totalAttendance', 0);
               courseObject.set('avgAttendance', "0");
@@ -160,11 +164,17 @@ Page({
             courseObject.set('professorName', thisCourse.professorName);
             courseObject.set('numberOfRates', 1);
             courseObject.set('totalGain', Number(e.detail.value.gain));
-            courseObject.set('totalGrade', Number(e.detail.value.grade));
+            if (e.detail.value.grade != "NA") {
+              courseObject.set('totalGrade', Number(e.detail.value.grade));
+              courseObject.set('avgGrade', Number(e.detail.value.grade).toFixed(1));
+            } else {
+              courseObject.set('totalGrade', null);
+              courseObject.set('avgGrade', Number(e.detail.value.grade).toFixed(1));
+            }
+            
             courseObject.set('totalDifficulty', Number(e.detail.value.difficulty));
-            courseObject.set('avgGain', Number(e.detail.value.gain).toFixed(1));
-            courseObject.set('avgGrade', Number(e.detail.value.grade).toFixed(1));
-            courseObject.set('avgDifficulty', Number(e.detail.value.difficulty).toFixed(1));
+            courseObject.set('avgGain', (Number(e.detail.value.gain) * 2).toFixed(1));
+            courseObject.set('avgDifficulty', (Number(e.detail.value.difficulty) * 2).toFixed(1));
 
             rate.set('order', 1);
             rate.set('course', courseObject);
@@ -182,8 +192,6 @@ Page({
       rate.set('numberOfLikes', 0);
 
       rate.save().then(function (thisRate) {
-        console.log('objectId is ' + thisRate.id);
-        console.log('Course objectId is ' + thisRate.attributes.course.id);
         
         wx.navigateBack({
           delta: 1, // 回退前 delta(默认为1) 页面
