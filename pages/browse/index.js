@@ -69,5 +69,11 @@ Page({
       .then(courses => this.setData({ courses }))
       .catch(console.error);
     wx.stopPullDownRefresh();
+  },
+  onShareAppMessage: function () {
+      return {
+          title: '选什么课',
+          path: '/pages/browse/index'
+      }
   }
 });

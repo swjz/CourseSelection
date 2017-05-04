@@ -7,7 +7,8 @@ Page({
     data: {
         rates: [],
         objectId: "",
-        course: {}
+        course: {},
+        courseName: ""
     },
     onLoad: function (options) {
         // 页面初始化 options为页面跳转所带来的参数
@@ -59,5 +60,11 @@ Page({
             .then(rates => this.setData({ rates }))
             .catch(console.error);
         wx.stopPullDownRefresh();
+    },
+    onShareAppMessage: function () {
+        return {
+            title: '大家对 '+this.data.course.attributes.courseName+' 的评价',
+            path: '/pages/detail/index?objectId='+this.data.objectId
+        }
     }
 })
