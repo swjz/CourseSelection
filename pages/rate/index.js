@@ -133,7 +133,7 @@ Page({
             if (e.detail.value.grade != "NA") {
               course[0].increment('numberOfGrades', 1);
               if(course[0].attributes.totalGrade===null){
-                course[0].attributes.totalGrade = Number(e.detail.value.grade);
+                course[0].set('totalGrade', Number(e.detail.value.grade));
               } else {
                 course[0].increment('totalGrade', Number(e.detail.value.grade));
               }
