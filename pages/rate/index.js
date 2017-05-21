@@ -132,7 +132,7 @@ Page({
             }
             if (e.detail.value.grade != "NA") {
               course[0].increment('numberOfGrades', 1);
-              if(course[0].attributes.totalGrade===null){
+              if (course[0].attributes.totalGrade === null) {
                 course[0].set('totalGrade', Number(e.detail.value.grade));
               } else {
                 course[0].increment('totalGrade', Number(e.detail.value.grade));
@@ -172,7 +172,7 @@ Page({
               courseObject.set('totalGrade', null);
               courseObject.set('avgGrade', Number(e.detail.value.grade).toFixed(1));
             }
-            
+
             courseObject.set('totalDifficulty', Number(e.detail.value.difficulty));
             courseObject.set('avgGain', (Number(e.detail.value.gain) * 2).toFixed(1));
             courseObject.set('avgDifficulty', (Number(e.detail.value.difficulty) * 2).toFixed(1));
@@ -193,20 +193,20 @@ Page({
       rate.set('numberOfLikes', 0);
 
       rate.save().then(function (thisRate) {
-        
+
         wx.navigateBack({
           delta: 1, // 回退前 delta(默认为1) 页面
-          success: function(res){
+          success: function (res) {
             wx.showToast({
-              title: '提交成功',
+              title: '您已提交成功，请下拉刷新',
               icon: 'success',
               duration: 2000
             })
           },
-          fail: function(res) {
+          fail: function (res) {
             // fail
           },
-          complete: function(res) {
+          complete: function (res) {
             // complete
           }
         })

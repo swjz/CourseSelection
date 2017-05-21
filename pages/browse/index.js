@@ -9,7 +9,7 @@ Page({
     inputVal: "",
     courses: [],
     skipped: 0,
-    loading: false,
+    loading: true,
     search: false
   },
   onLoad: function (options) {
