@@ -17,6 +17,8 @@
 - [ ] 优化日期时间的显示
 - [x] 分享菜单
 - [ ] 意见反馈
+- [ ] 在 detail 页面加上返回 browse 页面的按钮
+- [ ] 分别按三项排序的功能
 - [x] 改 tabBar 图标
 - [x] 修复 grade string 无法做加法(parse to number)的 bug
 - [x] detail 页刷新的时候把上面的平均分也刷新一下
