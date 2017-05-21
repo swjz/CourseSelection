@@ -7,7 +7,9 @@ Page({
   data: {
         inputShowed: false,
         inputVal: "",
-        courses: []
+        courses: [],
+        skipped: 0,
+        loading: false
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -17,7 +19,11 @@ Page({
   },
   onShow:function(){
     // 页面显示
+    this.setData({
+      loading: true
+    })
     new AV.Query('Course')
+      .limit(10)
       .descending('updatedAt')
       .find()
       .then(courses => this.setData({ courses }))
@@ -63,12 +69,36 @@ Page({
     });
   },
   onPullDownRefresh: function(){
+    this.setData({
+      skipped: 0,
+      loading: true
+    })
     new AV.Query('Course')
+      .limit(10)
       .descending('updatedAt')
       .find()
       .then(courses => this.setData({ courses }))
       .catch(console.error);
     wx.stopPullDownRefresh();
+  },
+  onReachBottom: function(){
+    var that = this;
+    this.setData({
+      skipped: this.data.skipped + 10,
+      loading: true
+    })
+    new AV.Query('Course')
+      .limit(10)
+      .skip(that.data.skipped)
+      .descending('updatedAt')
+      .find()
+      .then(courses => this.setData({
+        courses: that.data.courses.concat(courses)
+      }))
+      .catch(console.error);
+    this.setData({
+      loading: false
+    })
   },
   onShareAppMessage: function () {
       return {

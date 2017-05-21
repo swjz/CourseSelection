@@ -134,6 +134,10 @@
         <button formType="reset">清空</button>
       </view>
     </form>
+
+  </view>
+
+  <view class="endBlank">
   </view>
 
   <template is="foot" />

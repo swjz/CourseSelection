@@ -58,7 +58,7 @@
               <image class="wx-image_like" data-c_e_id="wx_imagef86ae815" src="http://qty83k.creatby.com/materials/origin/0564a45ab780222757935674e13d6919_origin.png" />
             </view>-->
           </view>
-          <text class="listitem_creattime"> {{rate.updatedAt}} </text>
+          <!--<text class="listitem_creattime"> {{rate.updatedAt}} </text>-->
         </view>
       </view>
     </view>

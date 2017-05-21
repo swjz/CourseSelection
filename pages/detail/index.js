@@ -27,6 +27,7 @@ Page({
         var course = AV.Object.createWithoutData('Course', this.data.objectId);
         course.fetch().then(course => this.setData({ course })); // 将 course 数据绑定
         new AV.Query('TypeRate')
+            .limit(1000)
             .equalTo('course', course)
             .ascending('updatedAt')
             .find()
@@ -54,6 +55,7 @@ Page({
         var course = AV.Object.createWithoutData('Course', this.data.objectId);
         course.fetch().then(course => this.setData({ course })); // 将 course 数据绑定
         new AV.Query('TypeRate')
+            .limit(1000)
             .equalTo('course', course)
             .ascending('updatedAt')
             .find()

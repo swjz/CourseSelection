@@ -21,3 +21,7 @@ form{
   margin-bottom: .3em;
   padding-right: 30rpx;
 }
+
+.endBlank{
+  margin-top: 15em;
+}
