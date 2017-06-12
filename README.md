@@ -3,6 +3,7 @@
 ## TODO
 ### High Priority
 - [ ] 获取小程序二维码的功能
+- [ ] 模糊搜索（弃用 LeanCloud 应用内搜索）
 
 ### Medium Priority
 
