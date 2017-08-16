@@ -1,4 +1,7 @@
-# 选什么课
+# 选什么课 Find Courses To Take
+## Introduction
+_Find Courses To Take_ is a web-based mini-app that helps students rate courses and professors. It is a WeChat Mini Program, which is a package inside WeChat using its API. The front-end is based on HTML, CSS and JavaScript. For simplicity, I use LeanCloud BaaS as back-end.
+The mini-app is now available on WeChat by searching "选什么课".
 
 ## TODO
 ### High Priority
